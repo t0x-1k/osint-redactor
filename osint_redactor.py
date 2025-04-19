@@ -23,7 +23,7 @@ def holehe_check(email: str) -> str:
             stderr=subprocess.DEVNULL,
             timeout=10
         )
-        return "success" if b'[+]' in result.stdout else "error"
+        return "✅" if b'[+]' in result.stdout else "❌"
     except Exception:
         return "Error"
 
