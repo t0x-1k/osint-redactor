@@ -43,14 +43,14 @@ python osint_de_redactor.py
 
 ---
 
-## 🛠️ Usage
+## Usage
 
 Run the script with custom inputs via command-line arguments:
 
 ```bash
 python osint_de_redactor.py \
-  --seeds denni lucas aarti \
-  --suffixes 123 2020 admin \
+  --seeds usernames \
+  --suffixes 123,2024 \
   --domains gmail.com protonmail.ch \
   --output results.json
 ```
@@ -59,25 +59,25 @@ python osint_de_redactor.py \
 
 | Argument       | Type     | Description                                 |
 |----------------|----------|---------------------------------------------|
-| `--seeds`      | List     | Base usernames (e.g., `aarti denni`)        |
+| `--seeds`      | List     | Base usernames (e.g., `foo, bar`)        |
 | `--suffixes`   | List     | Suffixes to append (e.g., `123 admin`)      |
 | `--domains`    | List     | Email domains (e.g., `gmail.com`)           |
 | `--output`     | Path     | Output file for JSON results (default: `results_dereacted.json`) |
 
 ---
 
-## 🧪 Output
+## Output
 
 The tool saves results as JSON like:
 
 ```json
 [
   {
-    "email": "denni123@gmail.com",
+    "email": "email@gmail.com",
     "status": "✅"
   },
   {
-    "email": "lucas.admin@protonmail.ch",
+    "email": "username.admin@protonmail.ch",
     "status": "❌"
   }
 ]
@@ -108,7 +108,7 @@ python osint_de_redactor.py \
 
 ---
 
-## 📄 License
+## License
 
 MIT © 2025 YourName
 
