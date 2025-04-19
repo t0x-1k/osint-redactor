@@ -28,19 +28,6 @@ cd osint-dereactor
 ```bash
 pip install -r requirements.txt
 ```
-
-### 3. Run the script
-
-```bash
-python osint_de_redactor.py
-```
-
-> Make sure `holehe` is installed:
->
-> ```bash
-> pip install holehe
-> ```
-
 ---
 
 ## Usage
